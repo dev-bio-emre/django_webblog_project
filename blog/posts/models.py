@@ -19,6 +19,6 @@ class Post(models.Model):
     is_published = models.BooleanField(default=False) # varsayılan olarak False, yani yayınlanmamış olarak başlar.
     
     
-    author = models.ForeignKey(Author, on_delete=models.SET_NULL) # bir postun bir yazarı olabilir, on_delete=models.SET_NULL ile yazar silindiğinde postun author alanı null olur.
+    author = models.ForeignKey(Author, on_delete=models.CASCADE) # bir postun sadece bir yazarı olabilir, on_delete=models.CASCADE ile yazar silindiğinde ilgili postların da silinmesini sağlıyoruz.
     tags = models.ManyToManyField(Tag, blank=True) # bir postun birden fazla tagi olabilir, blank=True ile boş bırakılabilir hale getiriyoruz.
 
