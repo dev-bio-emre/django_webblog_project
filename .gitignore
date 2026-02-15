@@ -1,0 +1,17 @@
+# Python sanal ortamı ve ortam değişkenleri dosyaları
+venv/
+env/
+.env
+
+# Gereksiz önbellek dosyaları
+__pycache__/
+*.pyc
+
+# Veritabanı (yerel veritabanını göndermek çakışma yaratır)
+db.sqlite3
+
+# VS Code ayarları
+.vscode/
+
+# İşletim sistemi dosyaları
+.DS_Store
