@@ -7,8 +7,14 @@ class Author(models.Model):
     age = models.PositiveIntegerField()
     email = models.EmailField()
 
+    def __str__(self):
+        return f"{self.name} {self.surname}"
+
 class Tag(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 
 class Post(models.Model):
