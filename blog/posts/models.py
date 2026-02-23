@@ -22,3 +22,5 @@ class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE) # bir postun sadece bir yazarı olabilir, on_delete=models.CASCADE ile yazar silindiğinde ilgili postların da silinmesini sağlıyoruz.
     tags = models.ManyToManyField(Tag, blank=True) # bir postun birden fazla tagi olabilir, blank=True ile boş bırakılabilir hale getiriyoruz.
 
+    def __str__(self):
+        return self.title
